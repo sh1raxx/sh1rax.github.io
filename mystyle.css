@@ -1,0 +1,20 @@
+body
+{
+background: #0c192c;
+}
+
+p
+{
+color: white;
+}
+h1,h2,h3,h4,h5,h6,p{
+    color: white;
+}
+th,td,table,ul,li,pre
+{
+color: white;
+}
+div
+{
+background-color: #0c192c;
+}
