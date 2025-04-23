@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Game Dev Portfolio</title>
+  <!-- Font Awesome для иконок соцсетей -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p1CmRJY6KAK1Jk5+3+gR5s3H2XQEoxb+ZiV+Rr8RGx9H67rq+N0JG+Z4aRCOWUD+u8f2dD4Aa3jz4X07Pz3U2Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body class="theme-light">
+  <header class="header">
+    <h1>My Game Dev Portfolio</h1>
+    <button id="theme-toggle" class="btn-toggle">Dark Mode</button>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="About">About</button>
+    <button class="tab-btn" data-tab="Portfolio">Portfolio</button>
+    <button class="tab-btn" data-tab="Certificates">Certificates</button>
+    <button class="tab-btn" data-tab="Resume">Resume</button>
+  </nav>
+
+  <main class="main-content">
+    <!-- About -->
+    <section id="About" class="tab-content active about">
+      <img src="Resources/AlenPhoto.jpg" alt="Your Name" class="avatar" />
+      <p class="bio">
+        Hi, I'm <strong>Alen</strong>, a passionate game developer
+        specializing in Unity and interactive audio design.<br />
+        I love crafting atmospheric horror experiences and experimenting
+        with shaders and FMOD to create immersive worlds.
+      </p>
+      <div class="socials">
+        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="Portfolio" class="tab-content portfolio">
+      <div class="project-grid">
+        <!-- Main Project Card -->
+        <div class="project-card main-project">
+          <div class="project-image">
+            <img src="Resources/whsiperbg.png" alt="The Whisper Game Screenshot" />
+          </div>
+          <div class="project-content">
+            <h3>The Whisper</h3>
+            <p>Small horror game prototype made in Unity and FMOD, inspired by Amnesia: The Dark Descent.</p>
+            <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">FMOD</span>
+              <span class="tag">Horror</span>
+            </div>
+            <a href="https://sh1rax.itch.io/the-whisper" target="_blank" class="project-link">View on itch.io</a>
+          </div>
+        </div>
+
+        <!-- Additional Project Cards -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Project Name</h3>
+            <p>Brief description of your project and its key features.</p>
+            <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Game Design</span>
+            </div>
+            <a href="#" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Project Name</h3>
+            <p>Brief description of your project and its key features.</p>
+            <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Game Design</span>
+            </div>
+            <a href="#" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Project Name</h3>
+            <p>Brief description of your project and its key features.</p>
+            <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Game Design</span>
+            </div>
+            <a href="#" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates -->
+    <section id="Certificates" class="tab-content certificates">
+      <ul>
+        <li>Unity Certified Programmer – Unity Technologies, 2024</li>
+        <li>FMOD Interactive Audio – Berklee College of Music, 2023</li>
+        <!-- список ваших сертификатов -->
+      </ul>
+    </section>
+
+    <!-- Resume -->
+    <section id="Resume" class="tab-content resume">
+      <h2>Resume</h2>
+      <p>
+        <a href="resume.pdf" target="_blank">Download my Resume</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>Contacts</h3>
+      <div class="footer-links">
+        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+          <img src="Resources/GithubLogo.png" alt="GitHub" class="logo-img" />
+          <span>GitHub</span>
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+          <img src="Resources/LinkedinLogo.png" alt="LinkedIn" class="logo-img" />
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://sh1rax.itch.io" target="_blank" aria-label="itch.io">
+          <img src="Resources/ItchIoLogo.png" alt="itch.io" class="logo-img" />
+          <span>itch.io</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/script.js"></script>
+</body>
+</html>
