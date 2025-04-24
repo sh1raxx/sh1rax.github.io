@@ -8,6 +8,8 @@
   --card-bg: #ffffff;
   --text-primary: #111;
   --text-secondary: #666;
+  --tag-bg: #005f99;
+  --tag-text: #ffffff;
 }
 body.theme-dark {
   --bg:      #1e1e1e;
@@ -18,6 +20,8 @@ body.theme-dark {
   --card-bg: #2a2a2a;
   --text-primary: #e0e0e0;
   --text-secondary: #b0b0b0;
+  --tag-bg: #1e90ff;
+  --tag-text: #ffffff;
 }
 
 /* ========== СБРОС ========== */
@@ -78,30 +82,72 @@ body, html {
 .main-content {
   max-width: 1200px;
   margin: 2rem auto;
+  margin-bottom: 5rem;
+}
+
+/* Tab content visibility */
+.tab-container {
+  position: relative;
+  min-height: 400px;
+  padding-bottom: 80px;
+}
+
+.tab-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   background: var(--surface);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  min-height: calc(100vh - 4rem);
-  margin-bottom: 5rem;
 }
-/* прячем все секции, кроме активной */
-.tab-content { display: none; }
-.tab-content.active { display: block; }
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dark mode adjustments */
+.theme-dark .tab-content {
+  background: var(--surface);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
 
 /* ========== ABOUT ========== */
-.about { text-align: center; }
+.about {
+  text-align: center;
+}
+
 .avatar {
-  width: 140px; height: 140px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
-  border: 3px solid var(--accent);
+  margin-bottom: 2rem;
+  border: 4px solid var(--accent);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .bio {
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .socials a {
   margin: 0 .5rem;
   color: var(--text);
@@ -115,6 +161,7 @@ body, html {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .project-card {
@@ -134,6 +181,7 @@ body, html {
   width: 100%;
   height: 200px;
   overflow: hidden;
+  position: relative;
 }
 
 .project-image img {
@@ -149,6 +197,11 @@ body, html {
 
 .project-content {
   padding: 1.5rem;
+}
+
+/* Adjust spacing for cards without images */
+.project-card:not(:has(.project-image)) .project-content {
+  padding-top: 2rem;
 }
 
 .project-content h3 {
@@ -172,11 +225,13 @@ body, html {
 }
 
 .tag {
-  background: var(--accent-color);
-  color: white;
+  background: var(--tag-bg);
+  color: var(--tag-text);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .project-link {
@@ -209,9 +264,93 @@ body, html {
 }
 
 /* ========== CERTIFICATES ========== */
-.certificates ul {
-  list-style: disc inside;
-  line-height: 1.6;
+.certificates {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.certificate-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 2rem;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-image {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificate-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.certificate-content {
+  flex-grow: 1;
+}
+
+.certificate-content h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.certificate-content .issuer {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.certificate-content .date {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.certificate-link {
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.certificate-link:hover {
+  color: var(--accent-hover);
+}
+
+@media (max-width: 600px) {
+  .certificate-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .certificate-image {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 /* ========== RESUME ========== */
@@ -321,6 +460,7 @@ body, html {
   padding: 1rem;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  height: 70px;
 }
 
 .footer-content {
@@ -381,4 +521,23 @@ body, html {
 
 .theme-dark .footer-links a:hover {
   color: var(--accent);
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 600px) {
+  .tab-container {
+    padding-bottom: 100px;
+  }
+  
+  .footer {
+    height: 90px;
+  }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+  .avatar {
+    width: 160px;
+    height: 160px;
+  }
 }

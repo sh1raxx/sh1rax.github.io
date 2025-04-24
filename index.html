@@ -12,7 +12,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-  <link rel="stylesheet" href="src/style.css" />
+  <link rel="stylesheet" href="./src/style.css" />
 </head>
 <body class="theme-light">
   <header class="header">
@@ -28,128 +28,165 @@
   </nav>
 
   <main class="main-content">
-    <!-- About -->
-    <section id="About" class="tab-content active about">
-      <img src="Resources/AlenPhoto.jpg" alt="Your Name" class="avatar" />
-      <p class="bio">
-        Hi, I'm <strong>Alen</strong>, a passionate game developer
-        specializing in Unity and interactive audio design.<br />
-        I love crafting atmospheric horror experiences and experimenting
-        with shaders and FMOD to create immersive worlds.
-      </p>
-      <div class="socials">
-        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-        <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram fa-2x"></i>
-        </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-      </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section id="Portfolio" class="tab-content portfolio">
-      <div class="project-grid">
-        <!-- Main Project Card -->
-        <div class="project-card main-project">
-          <div class="project-image">
-            <img src="Resources/whsiperbg.png" alt="The Whisper Game Screenshot" />
+    <div class="tab-container">
+      <!-- About -->
+      <section id="About" class="tab-content active">
+        <div class="about">
+          <img src="./Resources/AlenPhoto.jpg" alt="Your Name" class="avatar" />
+          <p class="bio">
+            Hi, I'm <strong>Alen</strong>, a passionate game developer
+            specializing in Unity and interactive audio design.<br />
+            I love crafting atmospheric horror experiences and experimenting
+            with shaders and FMOD to create immersive worlds.
+          </p>
+          <div class="socials">
+            <a href="https://github.com/sh1raxx" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="https://instagram.com/shhhirax" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://linkedin.com/in/sh1rax" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
           </div>
-          <div class="project-content">
-            <h3>The Whisper</h3>
-            <p>Small horror game prototype made in Unity and FMOD, inspired by Amnesia: The Dark Descent.</p>
-            <div class="project-tags">
-              <span class="tag">Unity</span>
-              <span class="tag">FMOD</span>
-              <span class="tag">Horror</span>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="Portfolio" class="tab-content">
+        <div class="project-grid">
+          <!-- Main Project Card -->
+          <div class="project-card main-project">
+            <div class="project-image">
+              <img src="./Resources/whsiperbg.png" alt="The Whisper Game Screenshot" />
             </div>
-            <a href="https://sh1rax.itch.io/the-whisper" target="_blank" class="project-link">View on itch.io</a>
+            <div class="project-content">
+              <h3>The Whisper</h3>
+              <p>Small horror game prototype made in Unity and FMOD, inspired by Amnesia: The Dark Descent.</p>
+              <div class="project-tags">
+                <span class="tag">Unity</span>
+                <span class="tag">FMOD</span>
+                <span class="tag">Horror</span>
+              </div>
+              <a href="https://sh1rax.itch.io/the-whisper" target="_blank" class="project-link">View on itch.io</a>
+            </div>
+          </div>
+
+          <!-- Additional Project Cards -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./Resources/BobbleHeadWars.png" alt="BobbleHead Wars Screenshot" />
+            </div>
+            <div class="project-content">
+              <h3>BobbleHead Wars</h3>
+              <p>Third person shooter game prototype made in Unity with tutorial in college course.</p>
+              <div class="project-tags">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">Third Person Shooter</span>
+              </div>
+              <a href="https://github.com/sh1raxx/Bobbleheadwars" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./Resources/RobotRampage.png" alt="Project Screenshot" />
+            </div>
+            <div class="project-content">
+              <h3>RobotRampage</h3>
+              <p>First person shooter game prototype made in Unity with tutorial in college course.</p>
+              <div class="project-tags">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">First Person Shooter</span>
+              </div>
+              <a href="https://github.com/sh1raxx/RobotRampageFinale" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./Resources/FlappyBird.jpg" alt="Project Screenshot" />
+            </div>
+            <div class="project-content">
+              <h3>Flappy Bird Clone</h3>
+              <p>Basic flappy bird clone made with Phaser.io</p>
+              <div class="project-tags">
+                <span class="tag">Phaser.io</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">2D</span>
+              </div>
+              <a href="https://github.com/sh1raxx/flappy-bird-alen" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certificates -->
+      <section id="Certificates" class="tab-content">
+        <div class="certificate-card">
+          <div class="certificate-image">
+            <img src="./Resources/FMOD.png" alt="FMOD Certificate" />
+          </div>
+          <div class="certificate-content">
+            <h3>FMOD for Game Audio</h3>
+            <p class="issuer">Udemy, Elvis Suhadolnik Bonesso</p>
+            <p class="date">Issued April 24, 2025</p>
+            <a href="https://ude.my/UC-fa2db65a-5d10-44ad-b75f-f3063c6823f0" class="certificate-link">
+              <i class="fas fa-certificate"></i>
+              <span>View Certificate</span>
+            </a>
           </div>
         </div>
 
-        <!-- Additional Project Cards -->
-        <div class="project-card">
-          <div class="project-content">
-            <h3>Project Name</h3>
-            <p>Brief description of your project and its key features.</p>
-            <div class="project-tags">
-              <span class="tag">Unity</span>
-              <span class="tag">C#</span>
-              <span class="tag">Game Design</span>
-            </div>
-            <a href="#" target="_blank" class="project-link">View Project</a>
+        <div class="certificate-card">
+          <div class="certificate-image">
+            <img src="./Resources/postman.png" alt="postman certificate" />
+          </div>
+          <div class="certificate-content">
+            <h3>Postman API Fundamentals Student Expert</h3>
+            <p class="issuer">Postman</p>
+            <p class="date">Issued Dec 3, 2024</p>
+            <a href="https://badgr.com/public/assertions/IdX0peLxRSSuEm4Li3upFA" class="certificate-link">
+              <i class="fas fa-certificate"></i>
+              <span>View Certificate</span>
+            </a>
           </div>
         </div>
+      </section>
 
-        <div class="project-card">
-          <div class="project-content">
-            <h3>Project Name</h3>
-            <p>Brief description of your project and its key features.</p>
-            <div class="project-tags">
-              <span class="tag">Unity</span>
-              <span class="tag">C#</span>
-              <span class="tag">Game Design</span>
-            </div>
-            <a href="#" target="_blank" class="project-link">View Project</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-content">
-            <h3>Project Name</h3>
-            <p>Brief description of your project and its key features.</p>
-            <div class="project-tags">
-              <span class="tag">Unity</span>
-              <span class="tag">C#</span>
-              <span class="tag">Game Design</span>
-            </div>
-            <a href="#" target="_blank" class="project-link">View Project</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certificates -->
-    <section id="Certificates" class="tab-content certificates">
-      <ul>
-        <li>Unity Certified Programmer – Unity Technologies, 2024</li>
-        <li>FMOD Interactive Audio – Berklee College of Music, 2023</li>
-        <!-- список ваших сертификатов -->
-      </ul>
-    </section>
-
-    <!-- Resume -->
-    <section id="Resume" class="tab-content resume">
-      <h2>Resume</h2>
-      <p>
-        <a href="resume.pdf" target="_blank">Download my Resume</a>
-      </p>
-    </section>
+      <!-- Resume -->
+      <section id="Resume" class="tab-content">
+        <h2>Resume</h2>
+        <p>
+          <a href="resume.pdf" target="_blank">Download my Resume</a>
+        </p>
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
     <div class="footer-content">
       <h3>Contacts</h3>
       <div class="footer-links">
-        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
-          <img src="Resources/GithubLogo.png" alt="GitHub" class="logo-img" />
+        <a href="https://github.com/sh1raxx" target="_blank" aria-label="GitHub">
+          <img src="./Resources/GithubLogo.png" alt="GitHub" class="logo-img" />
           <span>GitHub</span>
         </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
-          <img src="Resources/LinkedinLogo.png" alt="LinkedIn" class="logo-img" />
+        <a href="https://linkedin.com/in/sh1rax" target="_blank" aria-label="LinkedIn">
+          <img src="./Resources/LinkedinLogo.png" alt="LinkedIn" class="logo-img" />
           <span>LinkedIn</span>
         </a>
         <a href="https://sh1rax.itch.io" target="_blank" aria-label="itch.io">
-          <img src="Resources/ItchIoLogo.png" alt="itch.io" class="logo-img" />
+          <img src="./Resources/ItchIoLogo.png" alt="itch.io" class="logo-img" />
           <span>itch.io</span>
         </a>
       </div>
     </div>
   </footer>
 
-  <script src="src/script.js"></script>
+  <script src="./src/script.js"></script>
 </body>
-</html>
+</html> 
