@@ -355,9 +355,32 @@ body, html {
 
 /* ========== RESUME ========== */
 .resume h2 { margin-bottom: 1rem; }
-.resume a {
-  color: var(--accent);
-  font-weight: bold;
+
+.resume-download {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.download-button i {
+  font-size: 1.2rem;
 }
 
 /* Main Project Card */
